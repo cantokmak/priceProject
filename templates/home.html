@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome!{% endblock %}
+
+{% block content %}
+    <div class="container">
+<h1 class="text-center">Welcome to PriceSeeker</h1>
+    <h5>You can find the best price for grocery shopping</h5>
+    <hr>
+    <div class="row">
+
+    {% for p in product_list %}
+        <div class="col-md-4">
+        <div class="md-3">
+    <h4><a href="{% url 'priceapp:productdetail' p.slug %}">{{ p.title }}</a> </h4>
+        <img src= "{{ p.image.url }}" alt="" class="img-fluid" style="height: 150px ; object-fit: cover;">
+        <h3> BanaBi price: {{ p.first_price }} TL</h3>
+            <h3> İsteGelsin price: {{ p.second_price }} TL</h3>
+
+        </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

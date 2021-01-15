@@ -1,0 +1,18 @@
+<html>
+<head>
+
+    <title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <a href="/">Home</a>
+    <a href="/about/">About Us</a>
+    <a href="/contact/">Contact
+    <a href="/categories/">Category</a>
+    <hr>
+    {% block content %}
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}{{ product.title }}{% endblock %}
+{% block content %}
+    <div class="container">
+    <h3>Product: {{ product.title }}</h3><hr>
+    <div class="row">
+         <div class="col-md-8">
+             <img src="{{ product.image.url }}" alt="" class="img.fluid">
+         </div>
+        <div class="col-md-8">
+            <h3>{{ product.title }}</h3>
+            <h4>Category: {{ product.category }}</h4>
+            <h4><a href="{{ product.first_link }}"class="btn btn-primary">Banabi</a> : {{ product.first_price }} TL</h4>
+            <h4><a href="{{ product.second_link }}"class="btn btn-primary">İsteGelsin</a> : {{ product.second_price }} TL</h4>
+         </div>
+
+</div>
+    </div>
+{% endblock %}
